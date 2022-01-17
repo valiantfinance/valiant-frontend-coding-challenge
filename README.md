@@ -5,6 +5,11 @@
 yarn install
 ```
 
+### Start the backend server
+```
+yarn backend
+```
+
 ### Compiles and hot-reloads for development
 ```
 yarn serve
