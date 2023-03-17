@@ -22,7 +22,7 @@
           @input="validateNumber"
           @keydown="handleKeydown"
         >
-        <span class="inputNumberComponent__container--input--focus"></span>
+        <span class="inputNumberComponent__container--input--focus" />
       </div>
     </label>
     <p

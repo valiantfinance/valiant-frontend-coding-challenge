@@ -39,7 +39,7 @@
         />
       </div>
       <div class="footer">
-        {{ singlePayment ? `$${singlePayment} ${selectedRepaymentLabel} repayments` : '' }} <br>
+        {{ singlePayment ? `$${singlePayment.display} ${selectedRepaymentLabel} repayments` : '' }} <br>
         {{ totalPayment ? `$${totalPayment} Total repayment` : '' }}
       </div>
     </div>
@@ -77,7 +77,8 @@ export default {
 
       if (selectedAnnualRate && selectedTermMonths && requestedAmount && selectedRepaymentPeriod) {
         const pmt = PMT(selectedAnnualRate / selectedRepaymentPeriod, selectedTermMonths, requestedAmount)
-        return pmt.toFixed(2) * -1
+        const rawValue = pmt.toFixed(2) * -1
+        return { display: rawValue.toLocaleString(), raw: rawValue }
       }
 
       return null
@@ -85,7 +86,7 @@ export default {
     totalPayment () {
       const { selectedTermMonths } = this
 
-      if (this.singlePayment) return (this.singlePayment * selectedTermMonths).toFixed(2)
+      if (this.singlePayment) return (this.singlePayment.raw * selectedTermMonths).toLocaleString()
 
       return null
     },
