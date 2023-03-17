@@ -2,16 +2,16 @@
 
 TODO: Quick scratch breakdown of your to-dos, how you broke up the different tasks and any QA / tests you did.
 
-[] Create needed components, using folder structure src/components
+[x] Create needed components, using folder structure src/components
 
-- [] Input
-  -- [] Add Props
-  -- [] Style component
-  -- [] add logic that will communicate with main app
-- [] Select
-  -- [] Add Props
-  -- [] Style component
-  -- [] add logic that will communicate with main app
+- [x] Input
+      -- [x] Add Props
+      -- [x] Style component
+      -- [x] add logic that will communicate with main app
+- [x] Select
+      -- [x] Add Props
+      -- [x] Style component
+      -- [x] add logic that will communicate with main app
 
 [] App
 
