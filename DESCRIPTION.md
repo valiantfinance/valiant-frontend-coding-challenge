@@ -13,8 +13,8 @@ TODO: Quick scratch breakdown of your to-dos, how you broke up the different tas
       -- [x] Style component
       -- [x] add logic that will communicate with main app
 
-[] App
+[x] App
 
-- [] include custom components into main app using dummy propr
-- [] create data variables and fetch api into them
+- [] include custom components into main app using dummy props
+- [x] create data variables and fetch api into them
 - [] replace dummy content with api
