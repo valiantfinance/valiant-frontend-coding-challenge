@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint --ext .js,.vue src",
+    "test:e2e": "cypress open",
     "test:unit": "vitest"
   },
   "dependencies": {
@@ -15,8 +16,11 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
+    "cypress": "^13.6.6",
+    "cypress-vite": "^1.5.0",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-cypress": "^2.15.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
