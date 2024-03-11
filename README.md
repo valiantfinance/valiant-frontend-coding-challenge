@@ -1,39 +1,27 @@
-# valiant-frontend-coding-challenge
+# 🦁 Valiant Frontend Coding Challenge
 
-## Project setup
-```
-yarn install
-```
+Template for the completing the Valiant Frontend Coding Challenge with Vue 3. Use this as a starting point for your solution, we have included some of the tooling we use at Valiant in our day-to-day work.
 
-### Start the backend server
-```
-yarn backend
-```
+Dependencies include:
+- [Vue 3](https://vuejs.org/guide/introduction)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [ESLint](https://eslint.org/)
+- [Vitest](https://vitest.dev/)
+- [Cypress](https://www.cypress.io/)
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## 🚀 Getting Started
 
-### Compiles and minifies for production
-```
-yarn build
-```
+Requires Node 20 and NPM 10.
 
-### Run your unit tests
-```
-yarn test:unit
+```bash
+# Install dependencies.
+npm install
 ```
 
-### Run your end-to-end tests
-```
-yarn test:e2e
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 🏃‍♀️ Scripts
+- `npm run backend` – Start the backend server.
+- `npm run dev` – Start the development server.
+- `npm run lint` – Lint the code.
+- `npm run test:e2e` – Open Cypress.
+- `npm run test:unit` – Run vitest unit tests.
