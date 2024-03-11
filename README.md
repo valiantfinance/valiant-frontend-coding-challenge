@@ -1,7 +1,27 @@
-# Vue 3 + Vite
+# 🦁 Valiant Frontend Coding Challenge
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Template for the completing the Valiant Frontend Coding Challenge with Vue 3. Use this as a starting point for your solution, we have included some of the tooling we use at Valiant in our day-to-day work.
 
-## Recommended IDE Setup
+Dependencies include:
+- [Vue 3](https://vuejs.org/guide/introduction)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [ESLint](https://eslint.org/)
+- [Vitest](https://vitest.dev/)
+- [Cypress](https://www.cypress.io/)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## 🚀 Getting Started
+
+Requires Node 20 and NPM 10.
+
+```bash
+# Install dependencies.
+npm install
+```
+
+## 🏃‍♀️ Scripts
+- `npm run backend` – Start the backend server.
+- `npm run dev` – Start the development server.
+- `npm run lint` – Lint the code.
+- `npm run test:e2e` – Open Cypress.
+- `npm run test:unit` – Run vitest unit tests.
