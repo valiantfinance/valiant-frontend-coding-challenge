@@ -1,18 +1,10 @@
-<template>
-  <div id="app">
-    <!-- TODO: Complete the coding challenge here! -->
-  </div>
-</template>
-
-<script>
-export default {
+<script setup>
+defineOptions({
   name: 'App',
-}
+})
+
 </script>
 
-<style lang="scss" scoped>
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-</style>
+<template>
+  <!-- TODO: Complete the coding challenge here! -->
+</template>
