@@ -7,6 +7,14 @@ module.exports = {
   overrides: [
     {
       files: [
+        './index.html',
+        './src/**/*.{js,vue}',
+      ],
+      plugins: ['tailwindcss'],
+      extends: ['plugin:tailwindcss/recommended'],
+    },
+    {
+      files: [
         'tests/unit/**',
       ],
       plugins: [
