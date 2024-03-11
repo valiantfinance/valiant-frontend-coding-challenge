@@ -1,3 +1,5 @@
+import path from 'path'
+
 import { defineConfig } from 'vite'
 import eslint from 'vite-plugin-eslint'
 import vue from '@vitejs/plugin-vue'
@@ -8,4 +10,12 @@ export default defineConfig({
     eslint(),
     vue(),
   ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+  },
+  test: {
+    globals: true,
+  },
 })

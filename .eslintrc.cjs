@@ -3,6 +3,22 @@ module.exports = {
     'standard',
     'plugin:vue/vue3-recommended',
   ],
+  overrides: [
+    {
+      files: [
+        'tests/unit/**',
+      ],
+      plugins: [
+        'vitest',
+      ],
+      extends: [
+        'plugin:vitest/recommended',
+      ],
+      globals: {
+        ...require('eslint-plugin-vitest').environments.env.globals,
+      },
+    },
+  ],
   rules: {
     'array-bracket-spacing': ['error', 'never'],
     'comma-dangle': ['error', {
