@@ -1,26 +1,25 @@
 <template>
   <input
+    v-model="modelValue"
     type="number"
-    :value="formattedValue"
-    class="input rounded border border-gray-300 p-2"
+    class="w-full rounded border border-gray-300 p-2"
     placeholder="Enter amount"
+    :min="min"
+    :max="max"
   >
 </template>
 
-<script setup lang="ts">
-import { computed, defineModel, defineProps } from 'vue'
-
-// Define props with modelValue for v-model compatibility
-const props = defineProps({
-  modelValue: Number,
+<script setup>
+defineProps({
+  min: {
+    type: Number,
+    default: Number.MIN_SAFE_INTEGER,
+  },
+  max: {
+    type: Number,
+    default: Number.MAX_SAFE_INTEGER,
+  },
 })
 
-// Emit function for updating modelValue
-const model = defineModel()
-
-// Computed property for getting formatted value for display
-const formattedValue = computed(() => {
-  return props.modelValue ? props.modelValue.toLocaleString() : ''
-})
-
+const modelValue = defineModel('modelValue')
 </script>

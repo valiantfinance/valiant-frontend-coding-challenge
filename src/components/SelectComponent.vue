@@ -1,7 +1,7 @@
 <template>
   <select
     v-model="model"
-    class="mt-1 block w-full rounded-md border border-gray-300 bg-white px-4 py-2 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+    class="mt-1 block w-full rounded-md border border-gray-300 bg-white px-4 py-2 shadow-sm focus:border-blue-500"
   >
     <option
       disabled
@@ -20,18 +20,14 @@
   </select>
 </template>
 
-<script setup lang="ts">
-import { defineProps, watch } from 'vue'
+<script setup>
+import { defineProps } from 'vue'
 
-const props = defineProps({
+defineProps({
   options: {
-    type: [],
+    type: Array,
     default: () => ([]),
     validator: (value) => value.every(option => 'label' in option && 'value' in option),
-  },
-  modelValue: {
-    type: [String, Number],
-    default: '',
   },
   placeholder: {
     type: String,
@@ -39,9 +35,5 @@ const props = defineProps({
   },
 })
 
-const model = defineModel < string | number >('model')
-
-watch(() => props.modelValue, (newValue) => {
-  model.value = newValue
-})
+const model = defineModel()
 </script>
