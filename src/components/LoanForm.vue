@@ -1,65 +1,63 @@
 <template>
-  <div class="flex w-96 flex-col gap-3 rounded-xl border-2 p-4 text-xl">
-    <label>I need</label>
-    <FormItemComponent>
-      <template #label>
-        <label>$</label>
-      </template>
-      <template #default>
-        <InputComponent
-          v-model="form.loanAmount"
-          :min="MIN_LOAN_AMOUNT"
-          :max="MAX_LOAN_AMOUNT"
-        />
-      </template>
-    </FormItemComponent>
+  <div class="container mx-auto px-4 sm:px-2">
+    <div class="mx-auto flex max-w-96 flex-col gap-3 rounded-xl border-2 bg-white p-4 shadow-lg shadow-cyan-500/50">
+      <label>I need</label>
+      <FormItemComponent>
+        <template #label>
+          <label>$</label>
+        </template>
+        <template #default>
+          <InputComponent
+            v-model="form.loanAmount"
+            :min="MIN_LOAN_AMOUNT"
+            :max="MAX_LOAN_AMOUNT"
+          />
+        </template>
+      </FormItemComponent>
 
-    <FormItemComponent>
-      <template #label>
-        <label for="selectedLoanPurpose">for</label>
-      </template>
-      <template #default>
-        <SelectComponent
-          v-model="form.selectedLoanPurpose"
-          :options="loanPurposeData"
-          placeholder="Choose a loan purpose"
-        />
-      </template>
-    </FormItemComponent>
+      <FormItemComponent :error="loanPurposeError">
+        <template #label>
+          <label for="selectedLoanPurpose">for</label>
+        </template>
+        <template #default>
+          <SelectComponent
+            v-model="form.selectedLoanPurpose"
+            :options="loanPurposeData"
+            placeholder="Choose a loan purpose"
+          />
+        </template>
+      </FormItemComponent>
 
-    <FormItemComponent>
-      <template #label>
-        <label>repaid</label>
-      </template>
-      <template #default>
-        <SelectComponent
-          v-model="form.repaymentPeriod"
-          :options="repaymentPeriodsData"
-          placeholder="Choose a repayment period data"
-        />
-      </template>
-    </FormItemComponent>
+      <FormItemComponent :error="repaymentPeriodsError">
+        <template #label>
+          <label>repaid</label>
+        </template>
+        <template #default>
+          <SelectComponent
+            v-model="form.repaymentPeriod"
+            :options="repaymentPeriodsData"
+            placeholder="Choose a repayment period data"
+          />
+        </template>
+      </FormItemComponent>
 
-    <FormItemComponent>
-      <template #label>
-        <label>over</label>
-      </template>
-      <template #default>
-        <SelectComponent
-          v-model="form.termMonths"
-          :options="termMonthsData"
-          placeholder="Choose a term"
-        />
-      </template>
-    </FormItemComponent>
+      <FormItemComponent :error="termMonthsError">
+        <template #label>
+          <label>over</label>
+        </template>
+        <template #default>
+          <SelectComponent
+            v-model="form.termMonths"
+            :options="termMonthsData"
+            placeholder="Choose a term"
+          />
+        </template>
+      </FormItemComponent>
 
-    <ButtonComponent :type="'primary'">
-      Calculate
-    </ButtonComponent>
-
-    <p>{{ loanPurposeError }}</p>
-    <p>{{ repaymentPeriodsError }}</p>
-    <p>{{ termMonthsError }}</p>
+      <ButtonComponent type="primary">
+        Calculate
+      </ButtonComponent>
+    </div>
   </div>
 </template>
 
@@ -85,5 +83,4 @@ const form = ref({
   repaymentPeriod: '',
   termMonths: '',
 })
-
 </script>
