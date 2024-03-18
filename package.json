@@ -18,7 +18,11 @@
     "vue": "^3.4.19"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/eslint-config-typescript": "^13.0.0",
     "autoprefixer": "^10.4.18",
     "cypress": "^13.6.6",
     "cypress-vite": "^1.5.0",
