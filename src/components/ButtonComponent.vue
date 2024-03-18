@@ -12,9 +12,18 @@
 import { computed } from 'vue'
 
 const props = defineProps({
-  type: String,
-  size: String,
-  disabled: Boolean,
+  type: {
+    type: String,
+    default: 'primary',
+  },
+  size: {
+    type: String,
+    default: 'md',
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 const emit = defineEmits(['click'])

@@ -1,6 +1,6 @@
 <template>
   <input
-    v-model="modelValue"
+    v-model="model"
     type="number"
     class="w-full rounded border border-gray-300 p-2"
     placeholder="Enter amount"
@@ -21,5 +21,5 @@ defineProps({
   },
 })
 
-const modelValue = defineModel('modelValue')
+const model = defineModel()
 </script>
