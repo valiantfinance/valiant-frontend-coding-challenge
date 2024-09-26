@@ -1,0 +1,20 @@
+{
+    "vForm":{
+       "validationMessage":{
+          "loanAmountValidationMessage":"Requested Loan Amount field is required.",
+          "repaymentPeriodsValidationMessage":"Repayment Periods field is required.",
+          "loanTermValidationMessage":"Loan Term input field is required.",
+          "loanPurposeValidationMessage":"Loan Purpose field is required."
+       },
+       "pageTitle":"The loan repayment calculator",
+       "pageInfo":"Allow users to calculate repayments per period and the total amount of repayments over the life of the loan.",
+       "buttonText":"Calculate",
+       "repayments":"Repayments:",
+       "monthlyRepayment":"Monthly Repayment: $",
+       "totalRepayment":"Total Repayment: $"
+    },
+    "vlLoanAmountLabel":"Requested loan amount",
+    "vlLoanPurposeLabel":"Loan purpose",
+    "vlLoanTermLabel":"Loan term input",
+    "vlRepaymentPeriods":"Repayment periods"
+ }
