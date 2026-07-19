@@ -3,6 +3,7 @@ import vitePreprocessor from 'cypress-vite'
 
 export default defineConfig({
   e2e: {
+    fixturesFolder: 'tests/e2e/fixtures',
     setupNodeEvents (on) {
       on('file:preprocessor', vitePreprocessor())
     },

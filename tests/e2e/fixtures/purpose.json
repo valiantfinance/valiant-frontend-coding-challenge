@@ -1,0 +1,5 @@
+[
+  { "label": "General", "value": "general", "annualRate": 0 },
+  { "label": "Vehicle or transport", "value": "vehicle", "annualRate": 0.045 },
+  { "label": "Financing a property", "value": "property", "annualRate": 0.029 }
+]
