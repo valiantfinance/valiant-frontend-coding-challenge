@@ -1,16 +1,16 @@
 <script setup>
-import { useLoanCalculatorStore } from '@/stores/loanCalculatorStore'
+import LoanCalculator from '@/components/LoanCalculator.vue'
+import LoanSummary from '@/components/LoanSummary.vue'
 
 defineOptions({
-  name: 'App',
+  name: 'ValiantLoanCalculator',
 })
-
-const loanCalculatorStore = useLoanCalculatorStore()
 </script>
 
 <template>
-  <div>
-    <p>Loan Amount: {{ loanCalculatorStore.loanAmount }}</p>
-    <p>Interest Rate: {{ loanCalculatorStore.interestRate }}</p>
-  </div>
+  <main>
+    <h1>Loan Repayment Calculator</h1>
+    <LoanCalculator />
+    <LoanSummary />
+  </main>
 </template>
