@@ -32,7 +32,7 @@ defineProps({
         {{ error }}
       </p>
       <p
-        v-if="isLoading"
+        v-else-if="isLoading"
         role="status"
         class="flex-1 bg-yellow-50 px-4 py-3 text-center text-yellow-700"
       >

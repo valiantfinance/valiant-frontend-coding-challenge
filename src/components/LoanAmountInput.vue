@@ -58,7 +58,7 @@ const onBeforeInput = (event) => {
     <input
       v-model="modelValue"
       v-bind="$attrs"
-      class="w-36 border-b border-dashed border-gray-900 bg-transparent px-1 text-xl tracking-[0.32px] text-gray-900 outline-none transition focus:border-solid"
+      class="w-36 border-b border-dashed border-gray-500 bg-transparent px-1 text-xl tracking-[0.32px] text-gray-900 outline-none transition focus:border-solid"
       :placeholder="props.placeholder"
       type="text"
       inputmode="numeric"

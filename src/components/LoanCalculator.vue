@@ -24,6 +24,10 @@ onMounted(() => {
     :error="error"
     :is-loading="isLoading"
   />
+  <LoanFormErrors
+    :errors="loanStore.form.errors"
+    :touched="loanStore.form.touched"
+  />
   <section class="mx-auto mt-auto max-w-[1240px] rounded-xl bg-white p-8 lg:flex lg:gap-12 lg:p-16">
     <div class="md:w-2/3">
       <h2 class="mb-8 max-w-xl text-3xl leading-tight lg:text-5xl">
@@ -38,16 +42,10 @@ onMounted(() => {
         novalidate
         @submit.prevent
       >
-        <LoanFormErrors
-          :errors="loanStore.form.errors"
-          :touched="loanStore.form.touched"
-        />
-
         <fieldset class="flex flex-wrap items-center gap-2 text-xl leading-8">
           <legend class="sr-only">
             Loan calculator
           </legend>
-
           <LoanAmountInput
             id="loan-amount"
             v-model="amountInput"
@@ -60,7 +58,6 @@ onMounted(() => {
             label="Loan amount"
             @blur="loanStore.touch('amount')"
           />
-
           <LoanSelect
             id="loan-purpose"
             v-model="loanStore.purpose"
@@ -75,7 +72,6 @@ onMounted(() => {
             label="Loan purpose"
             @blur="loanStore.touch('purpose')"
           />
-
           <LoanSelect
             id="loan-period"
             v-model="loanStore.period"
@@ -90,7 +86,6 @@ onMounted(() => {
             label="Repayment period"
             @blur="loanStore.touch('period')"
           />
-
           <LoanSelect
             id="loan-term"
             v-model="loanStore.term"
