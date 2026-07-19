@@ -23,3 +23,18 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// Accessibility helpers using cypress-axe
+import 'cypress-axe'
+
+Cypress.Commands.add('injectAxe', () => {
+  cy.window({ log: false }).then((win) => {
+    // ensure axe is available via the plugin
+    // cypress-axe provides the global injection helpers
+  })
+})
+
+Cypress.Commands.add('checkPageA11y', (context = null, options = null) => {
+  cy.injectAxe()
+  cy.checkA11y(context, options)
+})
