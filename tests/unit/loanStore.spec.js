@@ -50,7 +50,7 @@ describe('useLoanStore', () => {
 
     expect(store.form.isValid).toBe(true)
     expect(store.summary).not.toBeNull()
-    expect(Math.trunc(store.summary.monthlyRepayments)).toBe(1384)
+    expect(Math.trunc(store.summary.repayments)).toBe(1384)
   })
 
   it('flags an amount below the minimum even when other fields are valid', () => {

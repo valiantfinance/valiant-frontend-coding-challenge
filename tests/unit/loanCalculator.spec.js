@@ -11,8 +11,8 @@ describe('calculateLoanSummary', () => {
       term: 12,
     })
 
-    expect(result.monthlyRepayments).toBe(1000)
-    expect(result.totalRepayments).toBe(12000)
+    expect(result.repayments).toBe(1000)
+    expect(result.total).toBe(12000)
   })
 
   it('matches the known PMT result for a monthly repayment schedule', () => {
@@ -24,8 +24,8 @@ describe('calculateLoanSummary', () => {
       term: 24,
     })
 
-    expect(Math.trunc(result.monthlyRepayments)).toBe(1384)
-    expect(result.totalRepayments).toBeCloseTo(result.monthlyRepayments * 24, 2)
+    expect(Math.trunc(result.repayments)).toBe(1384)
+    expect(result.total).toBeCloseTo(result.repayments * 24, 2)
   })
 
   it('accounts for repayment periods other than monthly (e.g. weekly)', () => {
@@ -37,8 +37,8 @@ describe('calculateLoanSummary', () => {
     })
 
     // totalPeriods = term * (period / 12) = 12 * (52 / 12) = 52
-    expect(result.monthlyRepayments).toBeCloseTo(12000 / 52, 2)
-    expect(result.totalRepayments).toBeCloseTo(result.monthlyRepayments * 52, 2)
+    expect(result.repayments).toBeCloseTo(12000 / 52, 2)
+    expect(result.total).toBeCloseTo(result.repayments * 52, 2)
   })
 
   it('always returns positive repayment values', () => {
@@ -49,7 +49,7 @@ describe('calculateLoanSummary', () => {
       term: 6,
     })
 
-    expect(result.monthlyRepayments).toBeGreaterThan(0)
-    expect(result.totalRepayments).toBeGreaterThan(0)
+    expect(result.repayments).toBeGreaterThan(0)
+    expect(result.total).toBeGreaterThan(0)
   })
 })
