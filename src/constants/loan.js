@@ -5,6 +5,13 @@ const LOAN_LIMITS = {
   },
 }
 
+const LOAN_REPAYMENT_FREQUENCY = {
+  52: 'Weekly',
+  26: 'Fortnightly',
+  12: 'Monthly',
+}
+
 export {
   LOAN_LIMITS,
+  LOAN_REPAYMENT_FREQUENCY,
 }

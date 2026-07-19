@@ -14,8 +14,8 @@ import PMT from '@/utils/PMT'
  * @param {number} options.term - The loan duration in years.
  *
  * @returns {Object} The calculated loan repayment summary.
- * @returns {number} returns.monthlyRepayments - The repayment amount per month.
- * @returns {number} returns.totalRepayments - The total amount repayable over the loan term.
+ * @returns {number} returns.repayments - The repayment amount per month.
+ * @returns {number} returns.total - The total amount repayable over the loan term.
  */
 const calculateLoanSummary = ({
   amount,
@@ -26,11 +26,11 @@ const calculateLoanSummary = ({
   const ratePerPeriod = purpose / period
   const totalPeriods = term * (period / 12)
   const repaymentPerPeriod = PMT(ratePerPeriod, totalPeriods, amount)
-  const roundedRepayment = Number(Math.abs(repaymentPerPeriod).toFixed(2))
+  const roundedRepayment = Math.ceil(Math.abs(repaymentPerPeriod) * 100) / 100
 
   return {
-    monthlyRepayments: roundedRepayment,
-    totalRepayments: Number((roundedRepayment * totalPeriods).toFixed(2)),
+    repayments: roundedRepayment,
+    total: Number((roundedRepayment * totalPeriods).toFixed(2)),
   }
 }
 

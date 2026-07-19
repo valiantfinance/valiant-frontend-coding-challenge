@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-background: #f8f8ff;
+  --color-primary: rgba(255, 254, 168, 1);
+  --color-primary-light: rgba(255, 254, 168, 0.3);
+  --color-text: rgb(34, 34, 34);
+
+  --font-sans: Geist, Arial, sans-serif;
+  --font-serif: "Libre Caslon Text", "Times New Roman", serif;
+}
+
+@layer base {
+  html {
+    @apply text-base leading-6;
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    letter-spacing: 0.32px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    font-weight: 400;
+    letter-spacing: 0.1px;
+  }
+}

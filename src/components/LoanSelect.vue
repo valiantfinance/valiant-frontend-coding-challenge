@@ -9,17 +9,25 @@ defineProps({
     type: Array,
     default: () => [],
   },
+  placeholder: {
+    type: String,
+    default: 'Select option',
+  },
 })
 </script>
 
 <template>
-  <select v-model="modelValue">
+  <select
+    v-model="modelValue"
+    required
+    class="min-w-52 appearance-none border-b border-dashed border-gray-900 bg-transparent px-1 text-xl text-gray-900 outline-none transition invalid:text-gray-400 focus:text-gray-900"
+  >
     <option
       value=""
       disabled
       hidden
     >
-      Select an option...
+      {{ placeholder }}
     </option>
     <option
       v-for="option in options"

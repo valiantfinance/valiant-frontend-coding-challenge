@@ -1,6 +1,5 @@
 <script setup>
 import LoanCalculator from '@/components/LoanCalculator.vue'
-import LoanSummary from '@/components/LoanSummary.vue'
 
 defineOptions({
   name: 'ValiantLoanCalculator',
@@ -8,9 +7,12 @@ defineOptions({
 </script>
 
 <template>
-  <main>
-    <h1>Loan Repayment Calculator</h1>
+  <main class="flex min-h-screen flex-col items-center justify-center p-4 md:p-8">
     <LoanCalculator />
-    <LoanSummary />
+    <footer class="mt-auto">
+      <p class=" text-center text-xs text-gray-500">
+        This calculator provides an estimate only and does not consitute a loan offer.
+      </p>
+    </footer>
   </main>
 </template>

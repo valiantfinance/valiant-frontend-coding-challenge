@@ -37,10 +37,12 @@ const onBeforeInput = (event) => {
 <template>
   <input
     v-model="modelValue"
+    class="w-36 border-b border-dashed border-gray-900 bg-transparent px-1 text-xl tracking-[0.32px] text-gray-900 outline-none transition focus:border-solid"
     :placeholder="placeholder"
     type="text"
     inputmode="numeric"
     pattern="[0-9]*"
+    autocomplete="off"
     @beforeinput="onBeforeInput"
   >
 </template>
