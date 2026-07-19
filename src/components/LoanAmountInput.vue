@@ -1,13 +1,23 @@
 <script setup>
+defineOptions({ inheritAttrs: false })
+
 const modelValue = defineModel({
   type: String,
   default: null,
 })
 
-defineProps({
+const props = defineProps({
   placeholder: {
     type: String,
     default: '$1,000',
+  },
+  prefix: {
+    type: String,
+    default: '',
+  },
+  label: {
+    type: String,
+    default: 'Loan amount',
   },
 })
 
@@ -35,14 +45,26 @@ const onBeforeInput = (event) => {
 </script>
 
 <template>
-  <input
-    v-model="modelValue"
-    class="w-36 border-b border-dashed border-gray-900 bg-transparent px-1 text-xl tracking-[0.32px] text-gray-900 outline-none transition focus:border-solid"
-    :placeholder="placeholder"
-    type="text"
-    inputmode="numeric"
-    pattern="[0-9]*"
-    autocomplete="off"
-    @beforeinput="onBeforeInput"
-  >
+  <div class="flex items-center">
+    <span
+      v-if="props.prefix"
+      class="mr-2"
+    >{{ props.prefix }}</span>
+    <label
+      v-if="props.label"
+      :for="$attrs.id"
+      class="sr-only"
+    >{{ props.label }}</label>
+    <input
+      v-model="modelValue"
+      v-bind="$attrs"
+      class="w-36 border-b border-dashed border-gray-900 bg-transparent px-1 text-xl tracking-[0.32px] text-gray-900 outline-none transition focus:border-solid"
+      :placeholder="props.placeholder"
+      type="text"
+      inputmode="numeric"
+      pattern="[0-9]*"
+      autocomplete="off"
+      @beforeinput="onBeforeInput"
+    >
+  </div>
 </template>

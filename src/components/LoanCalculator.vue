@@ -48,91 +48,63 @@ onMounted(() => {
             Loan calculator
           </legend>
 
-          <div>
-            <span class="mr-2">I need</span>
-            <label
-              for="loan-amount"
-              class="sr-only"
-            >
-              Loan amount
-            </label>
-            <LoanAmountInput
-              id="loan-amount"
-              v-model="amountInput"
-              name="amount"
-              required
-              placeholder="$ amount"
-              aria-describedby="amount-error"
-              :aria-invalid="Boolean(loanStore.form.touched.amount && loanStore.form.errors.amount)"
-              @blur="loanStore.touch('amount')"
-            />
-          </div>
+          <LoanAmountInput
+            id="loan-amount"
+            v-model="amountInput"
+            name="amount"
+            required
+            placeholder="$ amount"
+            aria-describedby="amount-error"
+            :aria-invalid="Boolean(loanStore.form.touched.amount && loanStore.form.errors.amount)"
+            prefix="I need"
+            label="Loan amount"
+            @blur="loanStore.touch('amount')"
+          />
 
-          <div>
-            <span class="mr-2">for</span>
-            <label
-              for="loan-purpose"
-              class="sr-only"
-            >
-              Loan purpose
-            </label>
-            <LoanSelect
-              id="loan-purpose"
-              v-model="loanStore.purpose"
-              name="purpose"
-              required
-              placeholder="what's it for"
-              :options="loanOptions.purpose"
-              :disabled="isLoading"
-              aria-describedby="purpose-error"
-              :aria-invalid="Boolean(loanStore.form.touched.purpose && loanStore.form.errors.purpose)"
-              @blur="loanStore.touch('purpose')"
-            />
-          </div>
+          <LoanSelect
+            id="loan-purpose"
+            v-model="loanStore.purpose"
+            name="purpose"
+            required
+            placeholder="what's it for"
+            :options="loanOptions.purpose"
+            :disabled="isLoading"
+            aria-describedby="purpose-error"
+            :aria-invalid="Boolean(loanStore.form.touched.purpose && loanStore.form.errors.purpose)"
+            prefix="for"
+            label="Loan purpose"
+            @blur="loanStore.touch('purpose')"
+          />
 
-          <div>
-            <span class="mr-2">repaid</span>
-            <label
-              for="loan-period"
-              class="sr-only"
-            >
-              Repayment period
-            </label>
-            <LoanSelect
-              id="loan-period"
-              v-model="loanStore.period"
-              name="period"
-              required
-              placeholder="how often"
-              :options="loanOptions.period"
-              :disabled="isLoading"
-              aria-describedby="period-error"
-              :aria-invalid="Boolean(loanStore.form.touched.period && loanStore.form.errors.period)"
-              @blur="loanStore.touch('period')"
-            />
-          </div>
+          <LoanSelect
+            id="loan-period"
+            v-model="loanStore.period"
+            name="period"
+            required
+            placeholder="how often"
+            :options="loanOptions.period"
+            :disabled="isLoading"
+            aria-describedby="period-error"
+            :aria-invalid="Boolean(loanStore.form.touched.period && loanStore.form.errors.period)"
+            prefix="repaid"
+            label="Repayment period"
+            @blur="loanStore.touch('period')"
+          />
 
-          <div>
-            <span class="mr-2">over</span>
-            <label
-              for="loan-term"
-              class="sr-only"
-            >
-              Loan term
-            </label>
-            <LoanSelect
-              id="loan-term"
-              v-model="loanStore.term"
-              name="term"
-              required
-              placeholder="how long"
-              :options="loanOptions.term"
-              :disabled="isLoading"
-              aria-describedby="term-error"
-              :aria-invalid="Boolean(loanStore.form.touched.term && loanStore.form.errors.term)"
-              @blur="loanStore.touch('term')"
-            />
-          </div>
+          <LoanSelect
+            id="loan-term"
+            v-model="loanStore.term"
+            name="term"
+            required
+            placeholder="how long"
+            :options="loanOptions.term"
+            :disabled="isLoading"
+            aria-describedby="term-error"
+            :aria-invalid="Boolean(loanStore.form.touched.term && loanStore.form.errors.term)"
+            prefix="over"
+            label="Loan term"
+            @blur="loanStore.touch('term')"
+          />
         </fieldset>
       </form>
     </div>
