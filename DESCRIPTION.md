@@ -9,9 +9,9 @@
 
 ## Solution
 
-- Define the overall application architecture
+- Plan the overall application architecture
 - Plan the component hierarchy and reusable components
-- Decide how state management should be structured
+- Decide how state should be managed
 - Define the API integration approach
 - Review Valiant Finance site and [Quote Form](https://get.valiant.finance/business-loans/) for design guidance
 - Research natural language calculator patterns and UI inspiration, eg [here](https://tympanus.net/Tutorials/NaturalLanguageForm/)
@@ -27,14 +27,13 @@
 
 ## Implementation
 
-- Build the calculator layout
+- Build the calculator main component
 - Create reusable form components
 - Integrate the API to populate loan options
 - Implement state management
 - Add validation and input formatting
 - Implement repayment calculation logic
-- Connect the UI to application state
-- Apply responsive styling and accessibility improvements
+- Apply responsive styling
 - Refactor where appropriate
 
 ## Error Handling
