@@ -30,9 +30,7 @@ const frequency = computed(() => {
         <p class="mb-2">
           Estimated {{ frequency }} repayments
         </p>
-        <p
-          class="mb-4 font-[family-name:var(--font-serif)] text-5xl font-normal tracking-[0.1px]"
-        >
+        <p class="mb-4 font-[family-name:var(--font-serif)] text-5xl font-normal tracking-[0.1px]">
           {{ formatCurrency(loanStore.summary?.repayments) }}
         </p>
       </div>
