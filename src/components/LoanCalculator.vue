@@ -28,7 +28,7 @@ onMounted(() => {
     :errors="loanStore.form.errors"
     :touched="loanStore.form.touched"
   />
-  <section class="mx-auto mt-auto max-w-[1240px] rounded-xl bg-white p-8 lg:flex lg:gap-12 lg:p-16">
+  <section class="mx-auto mb-4 mt-auto max-w-[1240px] rounded-xl bg-white p-8 lg:flex lg:gap-12 lg:p-16">
     <div class="md:w-2/3">
       <h2 class="mb-8 max-w-xl text-3xl leading-tight lg:text-5xl">
         Estimate your repayments in <em>seconds</em>
