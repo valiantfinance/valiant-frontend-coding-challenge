@@ -13,7 +13,7 @@ Keep the solution intentionally small:
 - [x] Verify starter project and required Node/npm versions
 - [x] Confirm API contracts and supplied PMT behaviour
 - [x] Verify baseline Vitest, ESLint, production build and Cypress
-- [ ] Implement and test repayment calculation
+- [x] Implement and test repayment calculation
 - [ ] Load loan purpose, repayment period and term options
 - [ ] Implement calculator state and loan amount validation
 - [ ] Build responsive calculator UI
