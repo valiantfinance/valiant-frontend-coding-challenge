@@ -18,7 +18,7 @@ Keep the solution intentionally small:
 - [x] Implement calculator state and loan amount validation
 - [x] Build responsive calculator UI
 - [x] Add loading, API error and retry states
-- [ ] Add Cypress coverage for key user flows
+- [x] Add Cypress coverage for key user flows
 - [x] Complete accessibility and responsive QA
 - [ ] Run final lint, tests, build and manual QA
 
