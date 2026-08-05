@@ -14,10 +14,10 @@ Keep the solution intentionally small:
 - [x] Confirm API contracts and supplied PMT behaviour
 - [x] Verify baseline Vitest, ESLint, production build and Cypress
 - [x] Implement and test repayment calculation
-- [ ] Load loan purpose, repayment period and term options
+- [x] Load loan purpose, repayment period and term options
 - [ ] Implement calculator state and loan amount validation
 - [ ] Build responsive calculator UI
-- [ ] Add loading, API error and retry states
+- [x] Add loading, API error and retry states
 - [ ] Add Cypress coverage for key user flows
 - [ ] Complete accessibility and responsive QA
 - [ ] Run final lint, tests, build and manual QA
