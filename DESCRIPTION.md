@@ -16,10 +16,10 @@ Keep the solution intentionally small:
 - [x] Implement and test repayment calculation
 - [x] Load loan purpose, repayment period and term options
 - [x] Implement calculator state and loan amount validation
-- [ ] Build responsive calculator UI
+- [x] Build responsive calculator UI
 - [x] Add loading, API error and retry states
 - [ ] Add Cypress coverage for key user flows
-- [ ] Complete accessibility and responsive QA
+- [x] Complete accessibility and responsive QA
 - [ ] Run final lint, tests, build and manual QA
 
 # Key decisions
