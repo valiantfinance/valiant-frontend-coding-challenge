@@ -15,7 +15,7 @@ Keep the solution intentionally small:
 - [x] Verify baseline Vitest, ESLint, production build and Cypress
 - [x] Implement and test repayment calculation
 - [x] Load loan purpose, repayment period and term options
-- [ ] Implement calculator state and loan amount validation
+- [x] Implement calculator state and loan amount validation
 - [ ] Build responsive calculator UI
 - [x] Add loading, API error and retry states
 - [ ] Add Cypress coverage for key user flows
