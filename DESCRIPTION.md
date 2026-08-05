@@ -20,7 +20,7 @@ Keep the solution intentionally small:
 - [x] Add loading, API error and retry states
 - [x] Add Cypress coverage for key user flows
 - [x] Complete accessibility and responsive QA
-- [ ] Run final lint, tests, build and manual QA
+- [x] Run final lint, tests, build and manual QA
 
 # Key decisions
 
@@ -51,4 +51,14 @@ Baseline before implementation:
 - Cypress: passing
 - Backend/API: verified locally
 
-Final QA and test results will be recorded here before submission.
+Final verification:
+- Node 20.20.2 / npm 10.8.2
+- ESLint: passing
+- Vitest: 3 test files, 9 tests passing
+- Production build: passing
+- Cypress: 2 specs, 5 tests passing
+- Loan amount boundaries verified at $1,000 and $20,000,000
+- Responsive QA completed across mobile, tablet and desktop widths
+- Keyboard navigation, visible focus and validation/error relationships verified
+- API failure and retry recovery verified
+- Browser console clean during normal calculator use
